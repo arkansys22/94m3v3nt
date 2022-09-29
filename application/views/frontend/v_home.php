@@ -138,7 +138,7 @@
       <div class="ashade-albums-grid ashade-grid ashade-grid-3cols is-masonry">
         <div class="ashade-album-item ashade-grid-item">
           <div class="ashade-album-item__image">
-            <img src="img/albums/masonry/album01.jpg" alt="My Special Day">
+            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album01.jpg" alt="My Special Day">
           </div>
           <h5>
             <span>Wedding Photos</span>
@@ -148,7 +148,7 @@
         </div><!-- .ashade-album-item -->
         <div class="ashade-album-item ashade-grid-item">
           <div class="ashade-album-item__image">
-            <img src="img/albums/masonry/album02.jpg" alt="Harley Davidson">
+            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album02.jpg" alt="Harley Davidson">
           </div>
           <h5>
             <span>Commercial Photos</span>
@@ -158,7 +158,7 @@
         </div><!-- .ashade-album-item -->
         <div class="ashade-album-item ashade-grid-item">
           <div class="ashade-album-item__image">
-            <img src="img/albums/masonry/album03.jpg" alt="Together Forever">
+            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album03.jpg" alt="Together Forever">
           </div>
           <h5>
             <span>Love Story</span>
@@ -168,7 +168,7 @@
         </div><!-- .ashade-album-item -->
         <div class="ashade-album-item ashade-grid-item">
           <div class="ashade-album-item__image">
-            <img src="img/albums/masonry/album05.jpg" alt="Sunset Nature">
+            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album05.jpg" alt="Sunset Nature">
           </div>
           <h5>
             <span>Nature Photos</span>
@@ -178,7 +178,7 @@
         </div><!-- .ashade-album-item -->
         <div class="ashade-album-item ashade-grid-item">
           <div class="ashade-album-item__image">
-            <img src="img/albums/masonry/album04.jpg" alt="Girl on Farm">
+            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album04.jpg" alt="Girl on Farm">
           </div>
           <h5>
             <span>Personal Session</span>
@@ -188,7 +188,7 @@
         </div><!-- .ashade-album-item -->
         <div class="ashade-album-item ashade-grid-item">
           <div class="ashade-album-item__image">
-            <img src="img/albums/masonry/album06.jpg" alt="City Tour">
+            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album06.jpg" alt="City Tour">
           </div>
           <h5>
             <span>Travel Photos</span>
@@ -198,7 +198,7 @@
         </div><!-- .ashade-album-item -->
         <div class="ashade-album-item ashade-grid-item">
           <div class="ashade-album-item__image">
-            <img src="img/albums/masonry/album08.jpg" alt="Colors of Nature">
+            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album08.jpg" alt="Colors of Nature">
           </div>
           <h5>
             <span>Nature Photos</span>
@@ -208,7 +208,7 @@
         </div><!-- .ashade-album-item -->
         <div class="ashade-album-item ashade-grid-item">
           <div class="ashade-album-item__image">
-            <img src="img/albums/masonry/album07.jpg" alt="Auto Showroom">
+            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album07.jpg" alt="Auto Showroom">
           </div>
           <h5>
             <span>Commercial Photo</span>
@@ -218,7 +218,7 @@
         </div><!-- .ashade-album-item -->
         <div class="ashade-album-item ashade-grid-item">
           <div class="ashade-album-item__image">
-            <img src="img/albums/masonry/album09.jpg" alt="Abandoned">
+            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album09.jpg" alt="Abandoned">
           </div>
           <h5>
             <span>Travel Photos</span>
@@ -228,7 +228,7 @@
         </div><!-- .ashade-album-item -->
         <div class="ashade-album-item ashade-grid-item">
           <div class="ashade-album-item__image">
-            <img src="img/albums/masonry/album11.jpg" alt="Let's Play">
+            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album11.jpg" alt="Let's Play">
           </div>
           <h5>
             <span>Personal Session</span>
@@ -238,7 +238,7 @@
         </div><!-- .ashade-album-item -->
         <div class="ashade-album-item ashade-grid-item">
           <div class="ashade-album-item__image">
-            <img src="img/albums/masonry/album10.jpg" alt="True Love">
+            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album10.jpg" alt="True Love">
           </div>
           <h5>
             <span>Love Story</span>
@@ -248,7 +248,7 @@
         </div><!-- .ashade-album-item -->
         <div class="ashade-album-item ashade-grid-item">
           <div class="ashade-album-item__image">
-            <img src="img/albums/masonry/album12.jpg" alt="New Family">
+            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album12.jpg" alt="New Family">
           </div>
           <h5>
             <span>Wedding Photos</span>
@@ -284,7 +284,7 @@
         <div class="ashade-aside-content">
       <div class="ashade-widget ashade-widget--about">
         <div class="ashade-widget--about__head">
-          <img src="img/general/owner-avatar.jpg" alt="Andrew Shade">
+          <img src="<?php echo base_url()?>bahan/frontend/img/general/owner-avatar.jpg" alt="Andrew Shade">
           <h5>
             <span>Photographer</span>
             Andrew Shade
