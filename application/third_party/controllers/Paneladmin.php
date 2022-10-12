@@ -2285,7 +2285,7 @@ class Paneladmin extends CI_Controller {
 	}
 	public function products_delete()
 	{
-			cek_session_akses ('products',$this->session->id_session);
+
 			$id = $this->uri->segment(3);
 			$_id = $this->db->get_where('products',['products_id' => $id])->row();
 			 $query = $this->db->delete('products',['products_id'=>$id]);
@@ -3618,7 +3618,7 @@ class Paneladmin extends CI_Controller {
 	}
 	public function products_cat_delete()
 	{
-			cek_session_akses ('products_cat',$this->session->id_session);
+
 			$id = $this->uri->segment(3);
 			$_id = $this->db->get_where('products_category',['products_cat_id' => $id])->row();
 			 $query = $this->db->delete('products_category',['products_cat_id'=>$id]);
@@ -3647,7 +3647,7 @@ class Paneladmin extends CI_Controller {
 				if ($this->session->level=='1'){
 						$data['record'] = $this->Crud_m->view_where_ordering('services',array('services_status'=>'delete'),'services_id','DESC');
 				}else{
-						$data['record'] = $this->Crud_m->view_where_ordering('services',array('services_post_oleh'=>$this->session->username,'services_status'=>'delete'),'services_id','DESC');
+						$data['record'] = $this->Crud_m->view_where_ordering('services',array('services_post_oleh'=>$this->session->username,'servicest_status'=>'delete'),'services_id','DESC');
 				}
 				$this->load->view('backend/services/v_daftar_hapus', $data);
 	}
