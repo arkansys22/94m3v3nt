@@ -11,7 +11,7 @@ class Product extends CI_Controller {
 	}
 	public function index()
 	{
-		
+
 		$data['identitas']= $this->Crud_m->get_by_id_identitas($id='1');
 		$this->load->view('frontend/v_product',$data);
 	}
@@ -36,10 +36,10 @@ class Product extends CI_Controller {
 	public function detail($products_id)
   {
 
-    	$row = $this->Crud_m->get_by_id_products($products_id);
+    	$row = $this->Crud_m->get_by_id_services($products_id);
     	if ($row)
         {
-					$data['posts']            = $this->Crud_m->get_by_id_products($products_id);
+					$data['posts']            = $this->Crud_m->get_by_id_services($products_id);
 					$data['identitas']= $this->Crud_m->get_by_id_identitas($id='1');
     			$this->load->view('frontend/v_product_detail', $data);
     		}

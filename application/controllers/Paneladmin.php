@@ -870,8 +870,10 @@ class Paneladmin extends CI_Controller {
 					$config['image_library']='gd2';
 					$config['source_image'] = './bahan/foto_gallery/'.$hasil22['file_name'];
 					$config['create_thumb']= FALSE;
-					$config['maintain_ratio']= FALSE;
-					$config['quality']= '80%';
+					$config['maintain_ratio']= TRUE;
+					$config['width'] = 500;
+					$config['height'] = 500;
+					$config['max_size'] = 500;
 					$config['new_image']= './bahan/foto_gallery/'.$hasil22['file_name'];
 					$this->load->library('image_lib', $config);
 					$this->image_lib->resize();
@@ -951,8 +953,10 @@ class Paneladmin extends CI_Controller {
 			$config['image_library']='gd2';
 			$config['source_image'] = './bahan/foto_gallery/'.$hasil22['file_name'];
 			$config['create_thumb']= FALSE;
-			$config['maintain_ratio']= FALSE;
-			$config['quality']= '80%';
+			$config['maintain_ratio']= TRUE;
+			$config['width'] = 500;
+			$config['height'] = 500;
+			$config['max_size'] = 500;
 			$config['new_image']= './bahan/foto_gallery/'.$hasil22['file_name'];
 			$this->load->library('image_lib', $config);
 			$this->image_lib->resize();
@@ -1042,7 +1046,7 @@ class Paneladmin extends CI_Controller {
 	}
 	public function gallery_delete()
 	{
-			cek_session_akses ('gallery',$this->session->id_session);
+
 			$id = $this->uri->segment(3);
 			$_id = $this->db->get_where('gallery',['gallery_id' => $id])->row();
 			 $query = $this->db->delete('gallery',['gallery_id'=>$id]);
@@ -3439,10 +3443,10 @@ class Paneladmin extends CI_Controller {
 					$config['image_library']='gd2';
 					$config['source_image'] = './bahan/foto_products/'.$hasil22['file_name'];
 					$config['create_thumb']= FALSE;
-					$config['maintain_ratio']= FALSE;
-					$config['quality']= '60%';
-					$config['width']= 150;
-					$config['height']= 150;
+					$config['maintain_ratio']= TRUE;
+					$config['quality']= '100%';
+					$config['width']= '500px';
+					$config['height']= '500px';
 					$config['new_image']= './bahan/foto_products/'.$hasil22['file_name'];
 					$this->load->library('image_lib', $config);
 					$this->image_lib->resize();
@@ -3494,7 +3498,7 @@ class Paneladmin extends CI_Controller {
 													'products_cat_post_jam'=>date('H:i:s'),
 													'products_cat_dibaca'=>'0',
 													'products_cat_status'=>'publish',
-													'products_catgambar'=>$hasil22['file_name'],
+													'products_cat_gambar'=>$hasil22['file_name'],
 													'products_cat_meta_desk'=>$this->input->post('products_cat_meta_desk'),
 													'products_cat_keyword'=>$tag);
 												}
@@ -3524,8 +3528,8 @@ class Paneladmin extends CI_Controller {
 			$config['create_thumb']= FALSE;
 			$config['maintain_ratio']= FALSE;
 			$config['quality']= '100%';
-			$config['width']= 1920;
-			$config['height']= 1080;
+			$config['width']= 500;
+			$config['height']= 500;
 			$config['new_image']= './bahan/foto_products/'.$hasil22['file_name'];
 			$this->load->library('image_lib', $config);
 			$this->image_lib->resize();
@@ -3618,7 +3622,7 @@ class Paneladmin extends CI_Controller {
 	}
 	public function products_cat_delete()
 	{
-			cek_session_akses ('products_cat',$this->session->id_session);
+
 			$id = $this->uri->segment(3);
 			$_id = $this->db->get_where('products_category',['products_cat_id' => $id])->row();
 			 $query = $this->db->delete('products_category',['products_cat_id'=>$id]);
@@ -3847,7 +3851,7 @@ class Paneladmin extends CI_Controller {
 	}
 	public function services_delete()
 	{
-			cek_session_akses ('services',$this->session->id_session);
+			
 			$id = $this->uri->segment(3);
 			$_id = $this->db->get_where('services',['services_id' => $id])->row();
 			 $query = $this->db->delete('services',['services_id'=>$id]);

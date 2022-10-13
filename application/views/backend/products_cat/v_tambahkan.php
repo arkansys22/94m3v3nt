@@ -78,7 +78,7 @@
                         <div class="custom-file">
                           <input type="file" class="custom-file-input" name="gambar" id="exampleInputFile">
                           <label class="custom-file-label" for="exampleInputFile">Tambah Gambar</label>
-                          <small> Dimensi foto Landscape 1920px x 1080px & maksimal ukuran file 1 Mb </small>
+                          <small> Dimensi foto persegi 500px x 500px & maksimal ukuran file 500 kb </small>
                         </div>
                       </div>
                     </div>

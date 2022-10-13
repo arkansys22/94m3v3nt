@@ -57,14 +57,6 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-12">
-                      <div class="form-group">
-                        <label>Harga</label>
-                        <input type="number" class="form-control" name="services_harga" value="<?php echo $rows['services_harga'] ?>">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
                   <div class="col-sm-12">
                   <div class="form-group">
                     <label for="inputName" class="col-sm-3 col-form-label">Kategori</label>
@@ -123,6 +115,7 @@
                         <div class="custom-file">
                           <input type="file" class="custom-file-input" name="gambar">
                           <label class="custom-file-label" for="exampleInputFile">Tambah Gambar <?php echo $rows['services_gambar'] ?></label>
+                          <small> Dimensi foto landscape 1920px x 1080px & maksimal ukuran file 1 Mb </small>
                         </div>
                       </div>
                     </div>

@@ -14,7 +14,7 @@ class Gallery extends CI_Controller {
 		$jumlah= $this->Crud_m->view_where('gallery',array('gallery_status'=>'publish'))->num_rows();
 		$config['base_url'] = base_url().'gallery/index/page/';
 		$config['total_rows'] = $jumlah;
-		$config['per_page'] = 12;
+		$config['per_page'] = 120;
 
 		$config['full_tag_open']    = "<ul class='pagination fotolia-blog-pagination'>";
 		$config['full_tag_close']   = "</ul>";

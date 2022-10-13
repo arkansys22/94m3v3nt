@@ -58,14 +58,6 @@
                   </div>
                   <div class="row">
                     <div class="col-sm-12">
-                      <div class="form-group">
-                        <label>Harga</label>
-                        <input type="number" class="form-control" name="services_harga" placeholder="Harga layanan">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12">
                   <div class="form-group">
                     <label for="inputName" class="col-sm-3 col-form-label">Kategori</label>
                     <div class="col-sm-12">
@@ -111,6 +103,7 @@
                         <div class="custom-file">
                           <input type="file" class="custom-file-input" name="gambar" id="exampleInputFile">
                           <label class="custom-file-label" for="exampleInputFile">Tambah Gambar</label>
+                          <small> Dimensi foto landscape 1920px x 1080px & maksimal ukuran file 1 Mb </small>
                         </div>
                       </div>
                     </div>

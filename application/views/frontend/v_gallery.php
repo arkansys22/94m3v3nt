@@ -28,144 +28,50 @@
 
 
 </head>
-<body>
-  <div class="preloader">
-      <div class="loader_grid">
-        <div class="loader_box loader_box1"></div>
-        <div class="loader_box loader_box2"></div>
-        <div class="loader_box loader_box3"></div>
-        <div class="loader_box loader_box4"></div>
-        <div class="loader_box loader_box5"></div>
-        <div class="loader_box loader_box6"></div>
-        <div class="loader_box loader_box7"></div>
-        <div class="loader_box loader_box8"></div>
-        <div class="loader_box loader_box9"></div>
-      </div>
-  </div>
+<body class="has-spotlight ashade-smooth-scroll">
+    <!-- Header -->
+	<?php $this->load->view('frontend/menu')?>
 
-    <?php $this->load->view('frontend/menu')?>
+    <!-- Content -->
+    <div class="ashade-page-title-wrap">
+        <h1 class="ashade-page-title">
+            <span>Galeri</span>
+            9AMEVENT
+        </h1>
+    </div>
 
-    <section class="small_pb small_pt">
-    	<div class="container">
-        <div class="row">
-            <div class="col-md-12 animation" data-animation="fadeInUp" data-animation-delay="0.2s">
-                <div class="heading_s1 text-center">
-                    <h2>KOMODO TRANSPORT GALLERY</h2>
-                  </div>
-              </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-                <div class="clearfix small_divider"></div>
-              </div>
-          </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <ul class="portfolio_container work_col3 gutter_small image_gallery">
-                        <li class="grid-sizer"></li>
-                          <?php foreach ($posts as $post_gallery) { ?>
-                        <li class="portfolio-item">
-                          <?php if(empty($post_gallery->gallery_gambar)) {
-                              echo "<img src='".base_url()."bahan/foto_products/noimage.jpg'>";
-                            }else {
-                              echo " <a href='".base_url('./bahan/foto_gallery/'.$post_gallery->gallery_gambar)."'><img src='".base_url('./bahan/foto_gallery/'.$post_gallery->gallery_gambar)."'></a>
-                              ";}
-                           ?>
-                        </li>
-                      <?php } ?>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+  <main class="ashade-content-wrap">
+		<div class="ashade-content-scroll">
+			<div class="ashade-content">
+        <section class="ashade-section">
+					<div class="ashade-row">
+						<div class="ashade-col col-12">
+							<p class="ashade-intro">GALERI FOTO 9AMEVENT</p>
+						</div>
+					</div>
+				</section>
+        <section class="ashade-section">
+					<div class="ashade-grid ashade-grid-2cols is-masonry">
+            <?php foreach ($posts as $post_gallery) {  ?>
+              <?php if(empty($post_gallery->gallery_gambar)) { ?>
 
-    <footer class="pattern_top footer_dark">
-      <div class="top_footer" style="background-color:#2b78bd;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-md-6 mb-4 mb-lg-0 animation" data-animation="fadeInUp" data-animation-delay="0.2s">
-                      <div class="footer_logo">
-                          <a href="<?php echo base_url()?>"><img alt="logo" src="<?php echo base_url()?>bahan/backend/foto/<?php echo $identitas->logo?>"></a>
-                        </div>
-                        <p><?php echo $identitas->slogan?></p>
-                        <ul class="contact_info contact_info_light list_none">
-                            <li>
-                                <span class="ti-location-pin"></span>
-                                <address><?php echo $identitas->alamat?></address>
-                            </li>
-                            <li>
-                                <span class="ti-email"></span>
-                                <a href="mailto:<?php echo $identitas->email?>"><?php echo $identitas->email?></a>
-                            </li>
-                            <li>
-                                <span class="ti-mobile"></span>
-                                <p><?php echo $identitas->no_telp?></p>
-                            </li>
-                        </ul>
-                    </div>
+              <?php  }else { ?>
+                <div class="ashade-gallery-item ashade-grid-item">
+   							 <a href="<?php echo base_url() ?>bahan/foto_gallery/<?=$post_gallery->gallery_gambar ?>" class="ashade-lightbox-link" data-size="1000x1000">
+   								 <img src="<?php echo base_url() ?>bahan/foto_gallery/<?=$post_gallery->gallery_gambar ?>" data-src="<?php echo base_url() ?>bahan/foto_gallery/<?=$post_gallery->gallery_gambar ?>" class="lazy" width="100%" height="100%">
+   							</a>
+   						</div>
+              <?php }  ?>
+						 <!-- .ashade-gallery-item -->
 
-                    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                      <h6 class="widget_title">TRENDING JOURNEY</h6>
-                        <ul class="recent_post border_bottom_dash list_none">
-                          <?php $blogs = $this->Crud_m->view_where_orderings_limit('blogs',array('blogs_status'=>'publish'),'blogs_dibaca','desc','3','1'); ?>
-                              <?php foreach ($blogs as $post_blog) {
-                                  $tgl_posting = $this->mylibrary->tgl_indo($post_blog->blogs_post_tanggal);
-                                ?>
-                                <li>
-                                    <div class="post_footer">
-                                        <div class="post_img">
-                                            <a href="#">
-                                              <?php if(empty($post_blog->blogs_gambar)) {
-                                                  echo "<img src='".base_url()."bahan/foto_products/noimage.jpg'>";
-                                                }else {
-                                                  echo " <img src='".base_url('./bahan/foto_blogs/'.$post_blog->blogs_gambar)."'>
+            <?php } ?>
+					</div>
+				</section>
+			</div><!-- .ashade-content -->
 
-                                                  ";}
-                                               ?>
-                                             </a>
-                                          </div>
-                                          <div class="post_content">
-                                            <h6><a href="<?php echo base_url() ?>blogs/<?php echo $post_blog->blogs_judul_seo?>"><?php echo $post_blog->blogs_judul?></a></h6>
-                                              <p class="small m-0"><?php echo $post_blog->blogs_dibaca?> views</p>
-                                          </div>
-                                      </div>
-                                  </li>
-                              <?php } ?>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-6 animation" data-animation="fadeInUp" data-animation-delay="0.5s">
-                        <h6 class="widget_title">OUR SOSIAL MEDIA</h6>
-                        <ul class="list_none footer_social">
-                          <li><a href="https://api.whatsapp.com/send/?phone=<?php echo $identitas->whatsapp ?>&text=Hallo+Komodo+Transport.."><i class="ion-social-whatsapp-outline"></i></a></li>
-                          <li><a href="<?php echo $identitas->facebook?>"><i class="ion-social-facebook"></i></a></li>
-                          <li><a href="<?php echo $identitas->instagram?>"><i class="ion-social-instagram-outline"></i></a></li>
-                          <li><a href="<?php echo $identitas->youtube?>"><i class="ion-social-youtube-outline"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bottom_footer bg-dark">
-          <div class="container">
-              <div class="row align-items-center">
-                  <div class="col-md-6">
-                      <p class="copyright m-md-0 text-center text-md-left">&copy; 2022 All Rights Reserved by Komodo Transport.</p>
-                    </div>
-                    <div class="col-md-6">
-                      <ul class="list_none footer_link text-center text-md-right">
-                          <li><a href="#">Web development by Dhawy</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- END FOOTER SECTION -->
-
-    <a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
-
-
-
-  <?php $this->load->view('frontend/js')?>
+			<!-- Footer -->
+			<?php $this->load->view('frontend/bottom_all')?>
+    <?php $this->load->view('frontend/js')?>
 </body>
+
 </html>

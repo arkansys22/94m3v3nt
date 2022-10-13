@@ -10,12 +10,12 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Add Gallery</h1>
+          <h1>Tambah Gallery</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="<?php echo base_url()?>paneladmin/gallery">Gallery</a></li>
-            <li class="breadcrumb-item active">Add Gallery</li>
+            <li class="breadcrumb-item active">Tambah Gallery</li>
           </ol>
         </div>
       </div>
@@ -43,7 +43,7 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="form-group">
-                        <label>Title</label>
+                        <label>Judul</label>
                         <input type="text" class="form-control" name="gallery_judul" placeholder="">
                       </div>
                     </div>
@@ -51,7 +51,7 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="form-group">
-                        <label>Description</label>
+                        <label>Isi Konten</label>
                         <textarea class="textarea"  name ="gallery_desk" style="width: 100%; height: 100px;"></textarea>
                       </div>
                     </div>
@@ -59,14 +59,14 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="form-group">
-                        <label>Meta Description</label>
+                        <label>Meta SEO</label>
                         <input type="text" class="form-control" name="gallery_meta_desk" placeholder="Meta description">
                       </div>
                     </div>
                     <div class="col-sm-12">
                       <!-- text input -->
                       <div class="form-group">
-                        <label>Keyword</label>
+                        <label>Kata Kunci</label>
                         <input type="text" class="form-control tags" id="gallery_keyword" value="" name="gallery_keyword"  data-role="tagsinput"/>
                           <?php foreach ($tag as $tag){    } ?>
                       </div>
@@ -74,10 +74,11 @@
                     <div class="col-sm-12">
                       <!-- text input -->
                       <div class="form-group">
-                        <label>Image</label>
+                        <label>Gambar</label>
                         <div class="custom-file">
                           <input type="file" class="custom-file-input" name="gambar" id="exampleInputFile">
-                          <label class="custom-file-label" for="exampleInputFile">Add Image</label>
+                          <label class="custom-file-label" for="exampleInputFile">Tambah Gambar</label>
+                          <small>Dimensi foto persegi 500px x 500px & maksimal ukuran file 500 kb</small>
                         </div>
                       </div>
                     </div>
@@ -86,8 +87,8 @@
                 </div>
               </div>
               <div class="card-footer">
-                <button type="submit" name ="submit" class="btn btn-success" title="Tambah Sliders"><i class="fas fa-file-upload"></i> Add</button>
-                <a class="btn btn-outline-info" title="Batal" href="<?php echo base_url()?>paneladmin/gallery"><i class="fab fa-creative-commons-sa"></i> Cancel</a>
+                <button type="submit" name ="submit" class="btn btn-success" title="Tambah Sliders"><i class="fas fa-file-upload"></i> Tambahkan</button>
+                <a class="btn btn-outline-info" title="Batal" href="<?php echo base_url()?>paneladmin/gallery"><i class="fab fa-creative-commons-sa"></i> Batal</a>
 
               </div>
                 <?php echo form_close(); ?>

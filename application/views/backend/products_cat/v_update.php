@@ -59,7 +59,7 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="form-group">
-                        <label>Meta Deskripsi (SEO)</label>
+                        <label>Meta SEO</label>
                         <input type="text" class="form-control" name="products_cat_meta_desk" value="<?php echo $rows['products_cat_meta_desk'] ?>">
                       </div>
                     </div>
@@ -94,7 +94,7 @@
                         <div class="custom-file">
                           <input type="file" class="custom-file-input" name="gambar">
                           <label class="custom-file-label" for="exampleInputFile"> <?php echo $rows['products_cat_gambar'] ?></label>
-                          <small> Dimensi foto Landscape 1920px x 1080px & maksimal ukuran file 1 Mb </small>
+                          <small> Dimensi foto persegi 500px x 500px & maksimal ukuran file 500 kb </small>
                         </div>
                       </div>
                     </div>

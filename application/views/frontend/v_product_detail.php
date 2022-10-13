@@ -28,6 +28,72 @@
 
 
 </head>
+
+<body class="has-spotlight ashade-smooth-scroll">
+    <!-- Header -->
+	<?php $this->load->view('frontend/menu')?>
+
+    <!-- Content -->
+    <div class="ashade-page-title-wrap">
+        <h1 class="ashade-page-title">
+            <span>Layanan - layanan</span>
+            Layanan Terbaik
+        </h1>
+    </div>
+
+  <main class="ashade-content-wrap">
+		<div class="ashade-content-scroll">
+			<div class="ashade-content">
+				<section class="ashade-section">
+					<div class="ashade-row">
+						<div class="ashade-col col-12">
+							<p class="ashade-intro">9amevent menawarkan berbagai layanan yang dapat menjawab kebutuhan Anda. Dengan kemampuan dan pengalaman yang 9amevent miliki antara lain :</p>
+						</div>
+					</div><!-- .ashade-row -->
+				</section>
+
+				<section class="ashade-section">
+					<div class="ashade-row">
+                        <div class="ashade-col col-12">
+							<div class="ashade-service-card-grid">
+                <?php $produk_kategori = $this->Crud_m->view_where_orderings('products_category',array('products_cat_status'=>'publish'),'products_cat_id','ASC'); ?>
+                  <?php foreach ($produk_kategori as $post) {  ?>
+      								<div class="ashade-service-card">
+      									<div class="ashade-service-card__head">
+      										<div class="ashade-service-card__image">
+                            <?php if(empty($post->products_cat_gambar)) {
+                                echo "<img src='".base_url()."bahan/foto_products/noimage.jpg'>";
+                              }else {
+                                echo " <img src='".base_url('./bahan/foto_products/'.$post->products_cat_gambar)."'>
+                                ";}
+                             ?>
+      										</div>
+      										<div class="ashade-service-card__label">
+      											<h4>
+      												<?php echo $post->products_cat_judul?>
+      											</h4>
+      										</div>
+      									</div><!-- .ashade-service-card__head -->
+      									<div class="ashade-service-card__content">
+      										<p><?php echo $post->products_cat_desk?></p>
+      										<div class="align-right">
+      											<a href="<?php echo base_url() ?>layanan/<?php echo $post->products_cat_judul_seo?>" class="ashade-learn-more">Selengkapnya</a>
+      										</div>
+      									</div>
+      								</div>
+                  <?php } ?>
+
+							</div><!-- .ashade-service-card-grid -->
+                        </div><!-- .ashade-col -->
+                    </div><!-- .ashade-row -->
+				</section>
+
+			</div><!-- .ashade-content -->
+
+    <?php $this->load->view('frontend/bottom_all')?>
+    <?php $this->load->view('frontend/js')?>
+</body>
+
 <body>
     <!--loader-->
     <div class="loader-wrap">

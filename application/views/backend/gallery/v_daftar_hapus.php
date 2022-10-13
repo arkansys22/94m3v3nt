@@ -6,13 +6,13 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Gallery Storage Bin</h1>
+          <h1>Daftar Gambar</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="<?php echo base_url()?>">Home</a></li>
-            <li class="breadcrumb-item active"><a href="<?php echo base_url()?>gallery">List Gallery</a></li>
-            <li class="breadcrumb-item active">Gallery Storage Bin</li>
+            <li class="breadcrumb-item"><a href="<?php echo base_url()?>paneladmin/home">Home</a></li>
+            <li class="breadcrumb-item active"><a href="<?php echo base_url()?>paneladmin/gallery">Gambar</a></li>
+            <li class="breadcrumb-item active">Sampah Gambar</li>
           </ol>
         </div>
       </div>
@@ -24,15 +24,15 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title"><a class="btn btn-success btn-sm" title="Edit Data" href="<?php echo base_url()?>paneladmin/gallery">Back List Slider</a></h3>
+              <h3 class="card-title"><a class="btn btn-success btn-sm" href="<?php echo base_url()?>paneladmin/gallery">Kembali</a></h3>
             </div>
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Date</th>
-                  <th>Title</th>
-                  <th>Action</th>
+                  <th>Tanggal</th>
+                  <th>Judul</th>
+                  <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -55,13 +55,6 @@
               <?php } ?>
 
                 </tbody>
-                <tfoot>
-                <tr>
-                  <th>Date</th>
-                  <th>Title</th>
-                  <th>Action</th>
-                </tr>
-                </tfoot>
               </table>
             </div>
             <!-- /.card-body -->

@@ -47,14 +47,14 @@
 <!-- Home Links and Titles -->
 <div class="ashade-home-link--works ashade-home-link-wrap">
   <div class="ashade-home-link is-link">
-    <span>My Photo Portfolio</span>
-    <span>Explore Works</span>
+    <span>Portfolio</span>
+    <span>Selengkapnya</span>
   </div>
 </div><!-- .ashade-home-link-wrap -->
 <div class="ashade-home-link--contacts ashade-home-link-wrap">
   <div class="ashade-home-link is-link">
-    <span>How to find me</span>
-    <span>Contact Me</span>
+    <span>Berminat Bekerjasama</span>
+    <span>Hubungi Kami</span>
   </div>
 </div><!-- .ashade-home-link-wrap -->
 
@@ -65,67 +65,54 @@
 
   <div class="ashade-home-return ashade-back-wrap is-inactive">
       <div class="ashade-back is-home-return">
-          <span>Return</span>
-          <span>Back</span>
+          <span>Kembali ke</span>
+          <span>Awal</span>
       </div>
-  </div><!-- .ashade-to-top-wrap -->
+  </div>
 
   <!-- Home Contacts Block -->
   <div id="ashade-home-contacts">
   <div class="ashade-row">
-    <div class="ashade-col col-12">
-      <p class="ashade-intro">Nice to meet you, friend! My name is Adrew Shade. I’m a professional photographer from Denver, Colorado. If you have any questions, suggestions or you just want to book a photo session feel free to use the contact form below. Lets make something great together!</p>
-    </div>
-  </div><!-- .ashade-row -->
-  <div class="ashade-row">
     <div class="ashade-col col-4">
       <div class="ashade-contact-details">
         <h4 class="ashade-contact-details__title">
-          <span>My Contacts and Socials</span>
-          How to Find Me
+          <span>Berminat Bekerjasama</span>
+          Hubungi Kami
         </h4>
         <ul class="ashade-contact-details__list">
           <li>
             <i class="ashade-contact-icon la la-map-marker"></i>
-            1250 Welton St, Denver, CO 80204
+            <?php echo $identitas->alamat?>
           </li>
           <li>
             <i class="ashade-contact-icon la la-phone"></i>
-            <a href="tel:+11234567890">+1 (123) 456 - 78 - 90</a>
+            <a href="tel:<?php echo $identitas->no_telp?>"><?php echo $identitas->no_telp?></a>
           </li>
           <li>
             <i class="ashade-contact-icon la la-envelope"></i>
-            <a href="mailto:a.shade@example.com">a.shade@example.com</a>
+            <a href="mailto:<?php echo $identitas->email?>"><?php echo $identitas->email?></a>
           </li>
           <li class="ashade-contact-socials">
             <i class="ashade-contact-icon la la-share-alt"></i>
-            <a href="#" target="_blank">Fb</a>
-            <a href="#" target="_blank">Ig</a>
+            <?php if(empty($identitas->instagram)) { ?>
+            <?php }else{ ?>
+                  <a href="<?php echo $identitas->instagram?>" target="_blank">IG</a>
+            <?php } ?>
+            <?php if(empty($identitas->facebook)) { ?>
+            <?php }else{ ?>
+                  <a href="<?php echo $identitas->facebook?>" target="_blank">FB</a>
+            <?php } ?>
+            <?php if(empty($identitas->youtube)) { ?>
+            <?php }else{ ?>
+                  <a href="<?php echo $identitas->youtube?>" target="_blank">YTB</a>
+            <?php } ?>
           </li>
         </ul>
       </div><!-- .ashade-contact-details -->
     </div>
     <div class="ashade-col col-8">
-      <form action="https://demo.shadow-themes.com/html/ashade/mail.html" method="post" class="ashade-contact-form">
-        <div class="ashade-row ashade-small-gap">
-          <div class="ashade-col col-4">
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-          </div>
-          <div class="ashade-col col-4">
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-          </div>
-          <div class="ashade-col col-4">
-            <input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
-          </div>
-        </div>
-        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-        <div class="ashade-contact-form__footer">
-          <div class="ashade-contact-form__response"></div>
-          <div class="ashade-contact-form__submit">
-            <input type="submit" value="Send Message">
-          </div>
-        </div>
-      </form>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d495.8336211329709!2d106.9022209735134!3d-6.175053031803609!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf5231444c088119e!2sJhons%20Photography!5e0!3m2!1sen!2sid!4v1665481138570!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </div>
   </div><!-- #ashade-home-contacts -->
@@ -134,135 +121,34 @@
   <div id="ashade-home-works">
     <div class="ashade-row">
       <div class="ashade-col col-12">
-        <p class="ashade-intro">Photography is my passion. Through the lens the world looks different and i would like to show you this difference. You can see it in my albums that are presented here.</p>
+        <p class="ashade-intro">DIBAWAH INI KEBERHASILAN DARI PROJEK 9AMEVENT. <br>ANDA BISA KONSULTASIKAN MENGENAI PROJEK SERUPA DENGAN <br>MENGKLIK GAMBAR / JUDUL DIBAWAH.</p>
       <div class="ashade-albums-grid ashade-grid ashade-grid-3cols is-masonry">
+        <?php $produk = $this->Crud_m->view_where_orderings('services',array('services_status'=>'publish'),'services_id','ASC'); ?>
+        <?php foreach ($produk as $post) {  ?>
         <div class="ashade-album-item ashade-grid-item">
           <div class="ashade-album-item__image">
-            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album01.jpg" alt="My Special Day">
+            <?php if(empty($post->services_gambar)) {
+                echo "<img src='".base_url()."bahan/foto_products/noimage.jpg'>";
+              }else {
+                echo " <img src='".base_url('./bahan/foto_products/'.$post->services_gambar)."'>
+                ";}
+             ?>
           </div>
           <h5>
-            <span>Wedding Photos</span>
-            My Special Day
+            <?php $kategori= $this->Crud_m->view_where('products_category', array('products_cat_id'=> $post->products_cat_id))->row(); ?>
+            <span><?=$kategori->products_cat_judul?></span>
+            	<?php echo $post->services_judul ?>
           </h5>
-          <a href="gallery-slider-parallax.html" class="ashade-album-item__link"></a>
+          <a href="https://api.whatsapp.com/send?phone=<?php echo $identitas->whatsapp?>&text=Halo,%20<?php echo $identitas->nama_website?>.%20Saya%20mau%20tanya%20untuk%20<?=$kategori->products_cat_judul?>%20<?php echo $post->services_judul ?>.%20Bisa%20bantu%20saya?" class="ashade-album-item__link"></a>
         </div><!-- .ashade-album-item -->
-        <div class="ashade-album-item ashade-grid-item">
-          <div class="ashade-album-item__image">
-            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album02.jpg" alt="Harley Davidson">
-          </div>
-          <h5>
-            <span>Commercial Photos</span>
-            Harley Davidson
-          </h5>
-          <a href="gallery-bricks-1x2.html" class="ashade-album-item__link"></a>
-        </div><!-- .ashade-album-item -->
-        <div class="ashade-album-item ashade-grid-item">
-          <div class="ashade-album-item__image">
-            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album03.jpg" alt="Together Forever">
-          </div>
-          <h5>
-            <span>Love Story</span>
-            Together Forever
-          </h5>
-          <a href="gallery-grid-3columns.html" class="ashade-album-item__link"></a>
-        </div><!-- .ashade-album-item -->
-        <div class="ashade-album-item ashade-grid-item">
-          <div class="ashade-album-item__image">
-            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album05.jpg" alt="Sunset Nature">
-          </div>
-          <h5>
-            <span>Nature Photos</span>
-            Sunset Nature
-          </h5>
-          <a href="gallery-masonry-4columns.html" class="ashade-album-item__link"></a>
-        </div><!-- .ashade-album-item -->
-        <div class="ashade-album-item ashade-grid-item">
-          <div class="ashade-album-item__image">
-            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album04.jpg" alt="Girl on Farm">
-          </div>
-          <h5>
-            <span>Personal Session</span>
-            Girl on Farm
-          </h5>
-          <a href="gallery-ribbon-large.html" class="ashade-album-item__link"></a>
-        </div><!-- .ashade-album-item -->
-        <div class="ashade-album-item ashade-grid-item">
-          <div class="ashade-album-item__image">
-            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album06.jpg" alt="City Tour">
-          </div>
-          <h5>
-            <span>Travel Photos</span>
-            City Tour
-          </h5>
-          <a href="gallery-masonry-3columns.html" class="ashade-album-item__link"></a>
-        </div><!-- .ashade-album-item -->
-        <div class="ashade-album-item ashade-grid-item">
-          <div class="ashade-album-item__image">
-            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album08.jpg" alt="Colors of Nature">
-          </div>
-          <h5>
-            <span>Nature Photos</span>
-            Colors of Nature
-          </h5>
-          <a href="gallery-justified.html" class="ashade-album-item__link"></a>
-        </div><!-- .ashade-album-item -->
-        <div class="ashade-album-item ashade-grid-item">
-          <div class="ashade-album-item__image">
-            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album07.jpg" alt="Auto Showroom">
-          </div>
-          <h5>
-            <span>Commercial Photo</span>
-            Auto Showroom
-          </h5>
-          <a href="gallery-adjusted-3columns.html" class="ashade-album-item__link"></a>
-        </div><!-- .ashade-album-item -->
-        <div class="ashade-album-item ashade-grid-item">
-          <div class="ashade-album-item__image">
-            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album09.jpg" alt="Abandoned">
-          </div>
-          <h5>
-            <span>Travel Photos</span>
-            Abandoned
-          </h5>
-          <a href="gallery-ribbon-medium.html" class="ashade-album-item__link"></a>
-        </div><!-- .ashade-album-item -->
-        <div class="ashade-album-item ashade-grid-item">
-          <div class="ashade-album-item__image">
-            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album11.jpg" alt="Let's Play">
-          </div>
-          <h5>
-            <span>Personal Session</span>
-            Let's Play
-          </h5>
-          <a href="gallery-ribbon-vertical.html" class="ashade-album-item__link"></a>
-        </div><!-- .ashade-album-item -->
-        <div class="ashade-album-item ashade-grid-item">
-          <div class="ashade-album-item__image">
-            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album10.jpg" alt="True Love">
-          </div>
-          <h5>
-            <span>Love Story</span>
-            True Love
-          </h5>
-          <a href="gallery-slider-fade.html" class="ashade-album-item__link"></a>
-        </div><!-- .ashade-album-item -->
-        <div class="ashade-album-item ashade-grid-item">
-          <div class="ashade-album-item__image">
-            <img src="<?php echo base_url()?>bahan/frontend/img/albums/masonry/album12.jpg" alt="New Family">
-          </div>
-          <h5>
-            <span>Wedding Photos</span>
-            New Family
-          </h5>
-          <a href="gallery-bricks-2x3.html" class="ashade-album-item__link"></a>
-        </div><!-- .ashade-album-item -->
+        <?php } ?>
       </div><!-- .ashade-albums-grid -->
     </div><!-- .ashade-col -->
   </div><!-- .ashade-row -->
   </div><!-- #ashade-home-works -->
 
 
-  <?php $this->load->view('frontend/bottom2')?>
+  <?php $this->load->view('frontend/bottom_home')?>
   <?php $this->load->view('frontend/js')?>
 
 </body>

@@ -11,8 +11,7 @@
                   <ul class="main-menu">
                       <li><a href="<?php echo base_url()?>">Beranda</a></li>
                       <li><a href="<?php echo base_url()?>layanan">Layanan</a></li>
-                      <li><a href="<?php echo base_url()?>">Galeri</a></li>
-                      <li><a href="<?php echo base_url()?>">Kontak</a></li>
+                      <li><a href="<?php echo base_url()?>galeri">Galeri</a></li>
                       <li>
                         <a href="#" class="ashade-aside-toggler">
                           <span class="ashade-aside-toggler__icon01"></span>

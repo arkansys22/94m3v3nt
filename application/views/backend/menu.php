@@ -181,14 +181,7 @@
             </p>
           </a>
         </li> -->
-        <li class="nav-item ">
-          <a href="<?php echo base_url(); ?>paneladmin/workshop" class="nav-link">
-            <i class="nav-icon fas fa-sliders-h"></i>
-            <p>
-              Slider
-            </p>
-          </a>
-        </li>
+
         <?php }?>
         <?php  if($this->session->level=='1'){ ?>
         <li class="nav-item ">
